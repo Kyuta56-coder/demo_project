@@ -1,0 +1,287 @@
+:root[data-theme="light"] {
+  --background-color: white;
+  --text-color: black;
+}
+
+:root[data-theme="dark"] {
+  --background-color: black;
+  --text-color: green;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+  header {
+    background-color:green;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* To align the logo and navigation */
+    align-items: center;
+    position:sticky;
+    width: 100%;
+  }
+
+  header img {
+    margin:0%;
+    height: 60px; /* Adjust the height of the logo */
+    width: 60px;
+    backdrop-filter:transparent;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  nav ul li a {
+    color: darkblue;
+    text-decoration: none;
+    font-size: 25px;   
+  }
+  nav ul li a:hover{
+    text-decoration: underline;
+    color:#5e1a1a;
+  }
+
+  nav ul li a.active {
+    font-weight: bold;
+    color:#333;
+  }
+  
+  /* Main Content Styling */
+  main {
+    padding: 20px;
+  }
+  
+  .intro h2 {
+    font-size: 2em;
+    color: #333;
+  }
+  
+  .projects-overview ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .projects-overview ul li {
+    font-size: 1.2em;
+  }
+  
+  .projects-overview ul li a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .projects-overview ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer Styling */
+  footer {
+    background-color: #357774;
+    color: rgb(20, 10, 131);
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+
+
+  .survey-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .survey-form-container h2 {
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="radio"], input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  textarea {
+    width: 70%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  button {
+    display: block;
+    width: auto;
+    padding: 10px;
+    background-color: #08310c;
+    color: white;
+    border: 1px double green;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #survey-response {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: green;
+  }
+
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.project-details {
+    display: none;
+    margin-top: 10px;
+}
+
+
+.about-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    padding: 20px;
+  }
+  
+  .bio {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .skills {
+    background-color: #e8f0fe;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .skills ul li {
+    margin-bottom: 10px;
+  }
+  
+  .skills ul ul {
+    margin-top: 5px;
+    padding-left: 20px;
+    list-style-type: circle;
+  }
+
+
+/* Responsive Design of homepage the header */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 10px;
+    }
+  
+    header h1 {
+      font-size: 18px;
+    }
+  
+    nav {
+      flex-direction: column;
+      gap: 5px;
+      margin-top: 10px;
+    }
+  
+    main {
+      flex-direction: column;
+      padding: 10px;
+      gap: 20px;
+    }
+  
+    section.left, section.right {
+      width: 100%;
+      padding: 10px;
+      border: none;
+    }
+  
+    .project img, .image img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .toggle-btn {
+      margin-top: 10px;
+    }
+  }
+  
+  /* Responsive Design for the about me video and whole page */
+  @media (max-width: 768px) {
+    .about-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 10px;
+    }
+  
+    .bio, .skills {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  
+    video {
+      width: 100%;
+      height: auto;
+    }
+  
+    footer p {
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+  

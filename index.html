@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Samiri Omari Kyuta - Web Developer">
+  <meta name="keywords" content="Portfolio, Web Developer, JavaScript, HTML, CSS">
+  <meta name="author" content="Reg: T23-03-18369. Bsc HIS 2.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="30">
+  <title>Home | Samiri Omari Kyuta</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+  <style>
+    /* Styling for the main section */
+    main {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px;
+    }
+
+    /* Left Section (intro and projects) */
+    .left-content {
+      flex: 1;
+      padding: 10px;
+      border-right: 2px solid #ccc;
+    }
+
+    /* Slider Section (aside) */
+    .slider-container {
+      flex: 1;
+      max-width: 600px;
+      margin: 0 20px;
+      position: relative;
+      border-left: 2px solid #ccc;
+    }
+
+    .slider {
+      width: 100%;
+      height: auto;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      height: auto;
+    }
+
+    .active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- Logo on the left -->
+    <img src="images/logo.png" alt="Logo">
+
+    <h2 id="greeting">Welcome to my Portfolio</h2>
+    
+    <!-- Navigation on the right -->
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="survey.html">Survey</a></li>
+        <li><button onclick="toggleTheme()">Light/Dark Mode</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Left Content with border-right -->
+    <div class="left-content">
+      <section class="intro">
+        <h2><mark style =color:blue;>Hi! I'm Samiri Omari Kyuta</mark></h2>
+        <p>A passionate web developer specializing in front-end and back-end technologies.</p>
+      </section>
+
+      <section class="projects-overview">
+        <h2>My Projects</h2>
+        <p>Check out some of my recent work:</p>
+        <figure>
+        <iframe src="projects_iframe.html" style="border: 2px solid green; border-radius: 5px; height: 300px; width: 100%;"></iframe>
+        <figcaption>These are my recent projects</figcaption>
+      </figure>
+      </section>
+    </div>
+
+    <!-- Right Section with Image Slider -->
+    <aside class="slider-container">
+      <figure>
+      <div class="slider">
+        <img src="images/slide1.jpg" alt="Slide 1" class="slide active">
+        <img src="images/slide2.jpg" alt="Slide 2" class="slide">
+        <img src="images/slide3.jpg" alt="Slide 3" class="slide">
+      </div>
+      <figcaption>Some of my homepage images </figcaption>
+    </figure>
+    </aside>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 <b>Reg_No: T23-03-18369. Bsc. HIS 2</b> All rights reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript for Automatic Image Slider
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      const slides = document.querySelectorAll('.slide');
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[index].classList.add('active');
+    }
+
+    function nextSlide() {
+      const slides = document.querySelectorAll('.slide');
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 3000); // Change slide every 3 seconds
+  </script>
+
+</body>
+</html>

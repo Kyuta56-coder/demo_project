@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="About Me - Samiri Omari Kyuta">
+  <meta name="keywords" content="About Samiri, Web Developer, HTML, CSS, JavaScript">
+  <meta name="author" content="T23-03-18369">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Samiri</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <header>
+     <!-- Logo on the left -->
+     <img src="images/logo.png" alt="Logo">
+    <h1>About Me</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="survey.html">Survey</a></li>
+        <li><button onclick="toggleTheme()">Light/Dark Mode</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about-container">
+      <article class="bio">
+        <h2>Who I Am</h2>
+        <p>Hello! My name is <strong>Samiri Omari Kyuta</strong>. I am a passionate web developer who loves creating clean and interactive websites. I recently completed web development training where I gained hands-on experience with HTML, CSS, JavaScript, and basic design principles.</p>
+    
+        <p>I enjoy building user-friendly websites and continuously learning new tools and technologies to improve my craft.</p>
+    
+        <!-- Video Section -->
+        <h3>Watch My Introduction Video</h3>
+        <hr>
+        <figure>
+        <video width="100%" height="400px" controls autoplay>
+            <source src="images/about_video.mp4" type="video/mp4">
+            <track></track>
+            Your browser does not support the video tag.
+        </video>
+        <figcaption>Video about me. T23-03-18369.</figcaption>
+      </figure>
+    </article>
+    
+
+      <aside class="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>Front-End
+            <ul>
+              <li>HTML5 & Semantic Structure</li>
+              <li>CSS3 (Grid, Flexbox, Animation)</li>
+              <li>JavaScript (DOM, Events, Validation)</li>
+            </ul>
+          </li>
+          <hr>
+          <li>Tools
+            <ul>
+              <li>VS Code</li>
+              <li>Git & GitHub</li>
+              <li>Chrome DevTools</li>
+            </ul>
+          </li>
+          <hr>
+          <li>Soft Skills
+            <ul>
+              <li>Problem Solving</li>
+              <li>Team Collaboration</li>
+              <li>Time Management</li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 <b>Reg_No: T23-03-18369. HIS 2</b></p>
+  </footer>
+
+</body>
+</html>
